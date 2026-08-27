@@ -5,10 +5,10 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   const increaseCount = () => {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
+    setCount((prev) => prev + 1);
+    setCount((prev) => prev + 1);
+    setCount((prev) => prev + 1);
   };
 
   return (
