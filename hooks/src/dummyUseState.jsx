@@ -1,30 +1,30 @@
-import { useState } from "react";
-import "./App.css";
+// import { useState } from "react";
+// import "./App.css";
 
-const App = () => {
-  // const [counter, setCounter] = useState(10);
-  // console.log(counter);
+// const App = () => {
+//   // const [counter, setCounter] = useState(10);
+//   // console.log(counter);
 
-  const [color, setColor] = useState("Red");
+//   const [color, setColor] = useState("Red");
 
-  // let color = "Red";
-  // const changeColor = () => {
-  //   color = "Blue";
-  //   console.log(color);
-  // };
+//   // let color = "Red";
+//   // const changeColor = () => {
+//   //   color = "Blue";
+//   //   console.log(color);
+//   // };
 
-  const changeColor = () => {
-    setColor("Blue");
-  };
+//   const changeColor = () => {
+//     setColor("Blue");
+//   };
 
-  return (
-    <>
-      <div className="container">
-        <h1>My favourite color is is {color}!</h1>
-        <button onClick={changeColor}>Blue</button>
-      </div>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <div className="container">
+//         <h1>My favourite color is is {color}!</h1>
+//         <button onClick={changeColor}>Blue</button>
+//       </div>
+//     </>
+//   );
+// };
 
-export default App;
+// export default App;
