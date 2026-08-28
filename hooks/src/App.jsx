@@ -4,9 +4,17 @@ import "./App.css";
 const App = () => {
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      <div className="container">I've rendered {count} times!</div>
+      <div className="container">
+        <h1>I've rendered {count} times!</h1>
+      </div>
     </>
   );
 };
