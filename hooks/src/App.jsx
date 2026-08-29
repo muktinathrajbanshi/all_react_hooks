@@ -3,12 +3,13 @@ import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState("Muktinath");
 
   useEffect(() => {
     setTimeout(() => {
       setCount((count) => count + 1);
     }, 2000);
-  }, []);
+  }, [count, name]);
 
   return (
     <>
