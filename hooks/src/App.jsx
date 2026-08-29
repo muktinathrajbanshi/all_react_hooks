@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const App = () => {
   const [value, setValue] = useState(0);
-  const [count, setCount] = useState(0);
+  const count = useRef(0);
 
   useEffect(() => {
-    setCount((prev) => prev + 1);
+    count.current = count.current + 1;
   });
 
   return (
@@ -27,7 +27,7 @@ const App = () => {
         >
           +1
         </button>
-        <h1>Render Count: {count}</h1>
+        <h1>Render Count: {count.current}</h1>
       </div>
     </>
   );
