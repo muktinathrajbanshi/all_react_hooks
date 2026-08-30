@@ -2,18 +2,21 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const inputElem = useRef();
+  const [number, setNumber] = useState(0);
+  const [counter, setCounter] = useState(0);
 
-  const btnClicked = () => {
-    console.log(inputElem.current);
-    inputElem.current.style.background = "blue";
-  };
+  function cubeNum(num) {
+    console.log("Calculation done!");
+    return Math.pow(num, 3);
+  }
+
+  const result = cubeNum(number);
 
   return (
     <>
       <div className="container">
-        <input type="text" ref={inputElem} />
-        <button onClick={btnClicked}>Click Here</button>
+        <input type="number" />
+        <h1>Cube of the number: {result}</h1>
       </div>
     </>
   );
