@@ -15,7 +15,13 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <input type="number" />
+        <input
+          type="number"
+          value={number}
+          onChange={(e) => {
+            setNumber(e.target.value);
+          }}
+        />
         <h1>Cube of the number: {result}</h1>
       </div>
     </>
