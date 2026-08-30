@@ -23,6 +23,14 @@ const App = () => {
           }}
         />
         <h1>Cube of the number: {result}</h1>
+        <button
+          onClick={() => {
+            setCounter(counter + 1);
+          }}
+        >
+          Counter++
+        </button>
+        <h1>Counter: {counter}</h1>
       </div>
     </>
   );
