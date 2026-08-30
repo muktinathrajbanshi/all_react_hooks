@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import "./App.css";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
     return Math.pow(num, 3);
   }
 
-  const result = cubeNum(number);
+  const result = useMemo(() => cubeNum(number), [number]);
 
   return (
     <>
