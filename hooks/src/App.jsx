@@ -5,7 +5,7 @@ import Header from "./components/Header";
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const newFn = useCallback(() => {}, []);
+  const newFn = useCallback((count) => {}, [count]);
 
   return (
     <>
