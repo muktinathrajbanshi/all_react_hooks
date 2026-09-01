@@ -20,3 +20,12 @@ button {
   margin-top: 1rem;
   cursor: pointer;
 }
+
+.btn {
+  width: 19rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
