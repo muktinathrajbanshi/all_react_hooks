@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Footer = () => {
-  const phone = useContext(AppContext);
+  const { phone } = useContext(AppContext);
 
   return (
     <div>

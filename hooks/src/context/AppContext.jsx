@@ -4,9 +4,12 @@ export const AppContext = createContext();
 
 const ContextProvider = (props) => {
   const phone = "+977 4234323324";
+  const name = "Muktinath Tech";
 
   return (
-    <AppContext.Provider value={phone}>{props.children}</AppContext.Provider>
+    <AppContext.Provider value={{ phone, name }}>
+      {props.children}
+    </AppContext.Provider>
   );
 };
 
