@@ -13,6 +13,9 @@ const App = () => {
       case "decrease": {
         return { count: state.count - 1 };
       }
+      case "input": {
+        return { count: action.payload };
+      }
       default: {
         return state;
       }
