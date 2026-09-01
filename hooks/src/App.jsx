@@ -33,6 +33,13 @@ const App = () => {
             Decrease
           </button>
         </div>
+        <input
+          value={state.count}
+          onChange={(e) =>
+            dispatch({ type: "input", payload: Number(e.target.value) })
+          }
+          type="number"
+        />
       </div>
     </>
   );
