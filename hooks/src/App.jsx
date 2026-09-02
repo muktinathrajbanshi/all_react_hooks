@@ -1,48 +1,19 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import "./App.css";
-import { useReducer } from "react";
 
 const App = () => {
-  const initialState = { count: 0 };
+  useEffect(() => {
+    console.log("Message from useEffect");
+  }, []);
 
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "increase": {
-        return { count: state.count + 1 };
-      }
-      case "decrease": {
-        return { count: state.count - 1 };
-      }
-      case "input": {
-        return { count: action.payload };
-      }
-      default: {
-        return state;
-      }
-    }
-  };
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+  useLayoutEffect(() => {
+    console.log("Message from useLayoutEffect");
+  }, []);
 
   return (
     <>
       <div className="container">
-        <h1>{state.count}</h1>
-        <div className="btn">
-          <button onClick={() => dispatch({ type: "increase" })}>
-            Increase
-          </button>
-          <button onClick={() => dispatch({ type: "decrease" })}>
-            Decrease
-          </button>
-        </div>
-        <input
-          value={state.count}
-          onChange={(e) =>
-            dispatch({ type: "input", payload: Number(e.target.value) })
-          }
-          type="number"
-        />
+        <h2>Test Message</h2>
       </div>
     </>
   );
