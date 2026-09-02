@@ -1,24 +1,25 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  useEffect(() => {
-    console.log("Message from useEffect");
-  }, []);
+  const [name, setName] = useState(
+    localStorage.getItem("username") ? localStorage.getItem("username") : "",
+  );
 
-  useLayoutEffect(() => {
-    console.log("Message from useLayoutEffect");
-  }, []);
+  useEffect(() => {
+    localStorage.setItem("username", name);
+  }, [name]);
 
   return (
     <>
       <div className="container">
-        <h2>Test Message</h2>
-        {Array(40000)
-          .fill("")
-          .map((item, index) => (
-            <li key={index}>{Math.pow(Math.random(), 10)}</li>
-          ))}
+        <input
+          type="text"
+          placeholder="Enter you name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <h2>Hello, {name}!</h2>
       </div>
     </>
   );
